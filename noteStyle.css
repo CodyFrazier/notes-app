@@ -1,0 +1,16 @@
+.rowNW{
+	display: flex;
+	flex-flow: nowrap row;
+}
+.rowWrap{
+	display: flex;
+	flex-flow: wrap row;
+}
+.columnNW{
+	display: flex;
+	flex-flow: nowrap column;
+}
+.columnWrap{
+	display: flex;
+	flex-flow: wrap column;
+}
