@@ -1,3 +1,36 @@
+body{
+	margin: 0.5rem;
+}
+input:focus{
+	outline: none;
+}
+.box{
+	flex: 1;
+	max-width: 95%;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 1rem;
+	
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+ul{
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+}
+li{
+	margin: .5rem;
+	justify-content: space-between;
+}
+.noteDel{
+	font-size: 16px;
+	height: 1.5rem;
+	width: 1.5rem;
+	margin-left: .5rem;
+	border-radius: 5px;
+	border: 1px solid;
+}
 .rowNW{
 	display: flex;
 	flex-flow: nowrap row;
@@ -13,4 +46,24 @@
 .columnWrap{
 	display: flex;
 	flex-flow: wrap column;
+}
+.flexCenterA{
+	align-items: center;
+}
+.flexAroundJ{
+	justify-content: space-around;
+}
+#userBox{
+	padding-top: 0;
+}
+h3{
+	padding: .25rem;
+	margin: 0;
+}
+h2{
+	padding: .25rem;
+	margin: 0;
+}
+#avatar{
+	
 }

@@ -5,10 +5,18 @@
 		<meta name = 'viewport' content = 'width = device-width initial-scale = 1.0'>
 		<title>Personal Notepad</title>
 		<link rel = 'stylesheet' href = 'noteStyle.css'>
-		<script defer> src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js'</script>
+		<script src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js'></script>
 	</head>
 	<body>
-		<div id = 'container'></div>
+		<main id = 'container' class = 'rowWrap flexAroundJ'>
+			<div id = 'userBox' class = 'columnNW box flexCenterA'></div>
+			<div id = 'savedNotes' class = 'columnWrap box flexCenterA'></div>
+			<form id = 'newNote' class = 'columnNW box flexCenterA'>
+				<h3>New Note</h3>
+				<textarea rows = '10' cols = '35'></textarea>
+				<input type = 'submit' id = 'addNote'>
+			</form>
+		</main>
 		<script src = 'notes.js'></script>
 	</body>
 </html>
