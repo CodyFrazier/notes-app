@@ -29,7 +29,7 @@ const startApp = async() => {
 const renderUser = () => {
 	document.querySelector('#userBox').innerHTML = `
 	<h3 id = 'userName'>${ user.fullName }</h3>
-	<div id = 'infoRow' class = 'rowNW'>
+	<div id = 'infoRow' class = 'rowWrap flexCenterA'>
 	<div id = 'avatar'><img src = ${ user.avatar }></div>
 	<div id = 'userData' class = 'columnWrap'>
 	<div id = 'bio' class = 'columnWrap'>
@@ -67,6 +67,12 @@ document.querySelector('#addNote').addEventListener('click', ({ target }) => {
 	}else if(notes.length === 5){
 		//build an overlay that alerts the user to this fact. Dismiss after interval of 5s.
 		//give x to dismiss as well.
+		document.querySelector('#overlay').style.display = 'flex';
+		document.querySelector('#alertCard').innerHTML = `
+		<p id = 'alertContent'>
+			You Can't Post Any More Notes Right Now!
+		</p>
+		`;
 		console.log("You can't post any more notes right now!");
 	}else if(!notes){
 		//use the same overlay as above, but alert this instead.
@@ -93,5 +99,15 @@ const setNoteEars = () => {
 		});
 	});
 }
+
+window.addEventListener('resize', ({ target }) => {
+	if(window.outerWidth > 414){
+		document.querySelector('#container').classList = 'rowWrap flexAroundJ';
+	}else{
+		document.querySelector('#container').classList = 'columnNW flexAroundA';
+	}
+	console.log(document.querySelector('#container').classList);
+	console.log(window.outerWidth);
+});
 
 startApp();

@@ -8,10 +8,16 @@
 		<script src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js'></script>
 	</head>
 	<body>
-		<main id = 'container' class = 'rowWrap flexAroundJ'>
-			<div id = 'userBox' class = 'columnNW box flexCenterA'></div>
-			<div id = 'savedNotes' class = 'columnWrap box flexCenterA'></div>
-			<form id = 'newNote' class = 'columnNW box flexCenterA'>
+		<div id = 'overlay'>
+			<div id = 'alertInput'>
+				<input type = 'button' value = ' Close '>
+			</div>
+			<p id = 'alertCard'></p>
+		</div>
+		<main id = 'container' class = 'rowWrap flexAroundJ zero'>
+			<div id = 'userBox' class = 'columnNW box flexCenterA zero'></div>
+			<div id = 'savedNotes' class = 'columnWrap box flexCenterA zero'></div>
+			<form id = 'newNote' class = 'columnNW box flexCenterA zero'>
 				<h3>New Note</h3>
 				<textarea rows = '10' cols = '35'></textarea>
 				<input type = 'submit' id = 'addNote'>
